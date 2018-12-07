@@ -71,7 +71,7 @@ export default class Settings extends Component {
         return (
             <TouchableOpacity onPress={() => this.pushScreen(item.index)}>
                 <View style={{flexDirection: 'row', height: 50, alignItems: 'center'}}>
-                    <Text style={{flex: 1, fontWeight: 'bold', fontSize: 13, marginLeft: 25}}>{item.title}</Text>
+                    <Text style={{flex: 1, fontSize: 15, marginLeft: 25, fontFamily: "HelveticaNeue"}}>{item.title}</Text>
                     <Image source={ require('../../resources/arrow_right.png') } style={{ height: 17, width: 9, marginRight: 25 }} />    
                 </View>
             </TouchableOpacity>
@@ -94,19 +94,19 @@ export default class Settings extends Component {
 
                 <View style={[{height: 150, backgroundColor: 'white', marginLeft: 20, marginRight: 20, borderRadius: 10, marginTop: 20}, styles.elevationLow]}>    
                     <View style={{flexDirection: 'row', height: 50, alignItems: 'center'}}>
-                        <Text style={{flex: 1, fontWeight: 'bold', fontSize: 13, marginLeft: 25}}>Notifications</Text>
+                        <Text style={{flex: 1, fontSize: 15, marginLeft: 25, fontFamily: "HelveticaNeue"}}>Notifications</Text>
                         <TouchableOpacity onPress={() => this.setNotification(this.state.notification)}>
                             <Image source={ (this.state.notification) ? require('../../resources/switch_on.png') : require('../../resources/switch_off.png') } style={{ height: 22, width: 36, marginRight: 15 }} />    
                         </TouchableOpacity>
                     </View>
                     <View style={{flexDirection: 'row', height: 50, alignItems: 'center'}}>
-                        <Text style={{flex: 1, fontWeight: 'bold', fontSize: 13, marginLeft: 25}}>Notifications Sound</Text>
+                        <Text style={{flex: 1, fontSize: 15, marginLeft: 25,fontFamily: "HelveticaNeue"}}>Notifications Sound</Text>
                         <TouchableOpacity onPress={() => this.setSound(this.state.sound)}>
                             <Image source={ (this.state.sound) ? require('../../resources/switch_on.png') : require('../../resources/switch_off.png') } style={{ height: 22, width: 36, marginRight: 15 }} />    
                         </TouchableOpacity>
                     </View>
                     <View style={{flexDirection: 'row', height: 50, alignItems: 'center'}}>
-                        <Text style={{flex: 1, fontWeight: 'bold', fontSize: 13, marginLeft: 25}}>Terms of Services</Text>
+                        <Text style={{flex: 1, fontSize: 15, marginLeft: 25, fontFamily: "HelveticaNeue"}}>Terms of Services</Text>
                         <Image source={ require('../../resources/arrow_right.png') } style={{ height: 17, width: 9, marginRight: 25 }} />    
                     </View>
                 </View>
@@ -126,7 +126,7 @@ const styles = StyleSheet.create({
             shadowRadius: 1,    
           },
           android: {
-            elevation: 5,
+            elevation: 2,
           },
         }),
     },

@@ -83,7 +83,7 @@ export default class Profile extends Component {
             <TouchableOpacity onPress={() => this.pushScreen(item.index)}>
                 <View style={{flexDirection: 'row', height: item_height, alignItems: 'center'}}>
                     <Image source={ item.icon } style={{ height: 28, width: 28, marginLeft: 15 }} />    
-                    <Text style={{flex: 1, fontWeight: 'bold', fontSize: 14, marginLeft: 15}}>{item.title}</Text>
+                    <Text style={{flex: 1, fontSize: 15, marginLeft: 15, fontFamily: "HelveticaNeue"}}>{item.title}</Text>
                     <Image source={ require('../../resources/arrow_right.png') } style={{ height: 17, width: 9, marginRight: 15 }} />    
                 </View>
             </TouchableOpacity>
@@ -106,10 +106,10 @@ export default class Profile extends Component {
                 </View>
 
                 <View style={[{flex: 1, backgroundColor: 'white', marginLeft: 20, marginRight: 20, borderRadius: 10, marginTop: 15, paddingLeft: 15, paddingRight: 15}, styles.elevationLow]}>    
-                    <Text style={{fontWeight: 'bold', fontSize: 17, marginTop: 25}}>About Us</Text>
-                    <Text style={{color: '#262E49', fontSize: 12, marginTop: 20, lineHeight: 20}}>There are many variations of passages of Lorem lpsum available, but the majority have suffered alteration in some form. By injected humour, or randomised words which don't look even slightly believable.</Text>
+                    <Text style={{fontWeight: 'bold', fontSize: 17, marginTop: 25, fontFamily: "Helvetica Neue"}}>About Us</Text>
+                    <Text style={{color: '#262E49', fontSize: 14, marginTop: 20, lineHeight: 20, fontFamily: "HelveticaNeue"}}>There are many variations of passages of Lorem lpsum available, but the majority have suffered alteration in some form. By injected humour, or randomised words which don't look even slightly believable.</Text>
 
-                    <Text style={{position: 'absolute', left: 0, right: 0, bottom: 20, fontSize: 13, color: '#262E49', textAlign: 'center'}}>Version 1.0</Text>
+                    <Text style={{position: 'absolute', left: 0, right: 0, bottom: 20, fontSize: 12, color: '#262E49', textAlign: 'center', fontFamily: "HelveticaNeue"}}>Version 1.0</Text>
                 </View>
             </View>
         )
@@ -125,7 +125,7 @@ const styles = StyleSheet.create({
             shadowRadius: 1,    
           },
           android: {
-            elevation: 5,
+            elevation: 2,
           },
         }),
     },

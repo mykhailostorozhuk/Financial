@@ -9,7 +9,7 @@ export const HomeItem = (props) => {
     return (
         <View style={[style.card, style.elevationLow]}>
             <Image style={{resizeMode: 'stretch', width: 50, height: 50, marginLeft: 20}} source={ props.item.thumb_img }/>
-            <Text style={[{fontSize: 13, paddingTop: 8, marginLeft: 20}]}>{ props.item.title }</Text>
+            <Text style={[{fontSize: 13, paddingTop: 8, marginLeft: 20, fontFamily: "HelveticaNeue"}]}>{ props.item.title }</Text>
         </View>
     )
 };
@@ -31,7 +31,7 @@ const style = StyleSheet.create({
             shadowRadius: 1,    
           },
           android: {
-            elevation: 5,
+            elevation: 2,
           },
         }),
     }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, TouchableOpacity, Text, Dimensions, StyleSheet, Image } from 'react-native';
+import { View, TouchableOpacity, Text, Platform, StyleSheet, Image } from 'react-native';
 
 export default class Header extends Component {
     constructor(props) {
@@ -24,7 +24,7 @@ export default class Header extends Component {
 
                 <TouchableOpacity style={{position: 'absolute', right: 15, top: 205}} onPress={() => this.onAction()}>
                     <View >
-                        <Text style={{fontSize: 15, color: 'white', fontWeight: 'bold'}}>{this.state.title}</Text>
+                        <Text style={{fontSize: 15, color: 'white', fontWeight: 'bold', fontFamily: "Helvetica Neue"}}>{this.state.title}</Text>
                         <View style={[styles.line, {width: 35, marginTop: 2, backgroundColor: 'white', height: 1}]}/>
                     </View>
                 </TouchableOpacity>
@@ -35,7 +35,17 @@ export default class Header extends Component {
 
 const styles = StyleSheet.create({
     header_view: {
-        alignItems: 'center', marginTop: -160, marginLeft: -15, height: 355
+        alignItems: 'center', 
+        marginTop: -160, 
+        height: 355,
+        ...Platform.select({
+            ios: {
+                marginLeft: -15 
+            },
+            android: {
+                marginLeft: -25 
+            }
+        })
     },
     line: {
         backgroundColor: '#262E49', 

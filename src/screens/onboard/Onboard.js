@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, Text, Image, StatusBar, Dimensions, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, Image, Platform, Dimensions, StyleSheet, TouchableOpacity } from 'react-native';
 
 import Swiper from '../../components/Swiper';
 import Button from '../../components/Button';
@@ -45,8 +45,8 @@ export default class Onboard extends Component {
                 <View>
                     <Image source={ item.img_link } style={{resizeMode: 'stretch', height: 200, width: deviceWidth - 100}}/>
                 </View>
-                <Text style={{color: '#190310', fontWeight: 'bold', fontSize: 25, marginTop: 50}}>{item.title}</Text>
-                <Text style={{width: 350, textAlign: 'center', marginTop: 15, fontSize: 12, color: '#262E49', lineHeight: 20}}>{item.description}</Text>
+                <Text style={{color: '#190310', fontWeight: 'bold', fontSize: 25, marginTop: 50, fontFamily: "Helvetica Neue"}}>{item.title}</Text>
+                <Text style={{width: deviceWidth - 2 * 30, textAlign: 'center', marginTop: 15, fontSize: 12, color: '#262E49', lineHeight: 20, fontFamily: "HelveticaNeue"}}>{item.description}</Text>
             </View>
         );
     }
@@ -71,7 +71,7 @@ export default class Onboard extends Component {
                 {listPages}
             </Swiper>
             <View style={styles.containerFooter}>
-                <Button customContainer={{width: deviceWidth - 2 * 30, height: 50}} customStyleBtn={{top: 15}} title={"Get Started"} callback={this.onHandledCallback.bind(this)} />
+                <Button customContainer={{width: deviceWidth - 2 * 30, height: 50}} customStyleBtn={{top: 15, fontFamily: "Helvetica Neue"}} title={"Get Started"} callback={this.onHandledCallback.bind(this)} />
             </View>
         </View>);
     }
@@ -94,8 +94,15 @@ const styles = StyleSheet.create({
     containerFooter: {
         position: 'absolute',
         alignItems: 'center',
-        bottom: 150,
         left: 0,
         right: 0,
+        ...Platform.select({
+            ios: {
+                bottom: 150,
+            },
+            android: {
+                bottom: 100,
+            }
+        })
     }
 });

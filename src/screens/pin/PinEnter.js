@@ -42,28 +42,28 @@ export default class PinEnter extends Component {
 
         str_pin = str_pin.concat("" + value + "")
 
-        if (!this.state.first_pin) {
+        if (str_pin.length == 1) {
             this.setState({
                 first_pin: true
             })
-        } else if (this.state.first_pin) {
+        } else if (str_pin.length == 2) {
             this.setState({
                 second_pin: true
             })
-        } else if (this.state.second_pin) {
+        } else if (str_pin.length == 3) {
             this.setState({
                 third_pin: true
             })
-        } else if (this.state.third_pin) {
+        } else if (str_pin.length == 4) {
             this.setState({
                 four_pin: true
             })
         } 
 
-        if (this.state.four_pin) {
+        if (str_pin.length == 4) {
             // alert(str_pin)
 
-            this.props.navigation.navigate("Home")
+            this.props.navigation.navigate("Main")
         }
     }
 

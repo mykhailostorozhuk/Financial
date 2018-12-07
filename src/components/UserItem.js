@@ -22,8 +22,8 @@ export default class UserItem extends Component {
                     <View style={{flexDirection: 'row', alignItems: 'center'}}>
                         <Image source={ avatar } style={{ height: 30, width: 30, marginLeft: 15 }} />   
                         <View style={{flexDirection: 'column', height: 65, justifyContent: 'center'}}>
-                            <Text style={{fontWeight: 'bold', fontSize: 16, marginLeft: 15}}>{name}</Text>
-                            <Text style={{marginLeft: 15, fontSize: 14, marginTop: 3, color: '#262E49'}}>{phone}</Text>
+                            <Text style={{fontSize: 17, marginLeft: 15, fontFamily: "HelveticaNeue"}}>{name}</Text>
+                            <Text style={{marginLeft: 15, fontSize: 14, marginTop: 3, color: '#262E49', fontFamily: "HelveticaNeue"}}>{phone}</Text>
                         </View> 
                     </View>
                 </View>
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
             shadowRadius: 1,    
           },
           android: {
-            elevation: 5,
+            elevation: 2,
           },
         }),
     },

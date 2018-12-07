@@ -531,8 +531,14 @@ export default class extends Component {
             borderRadius: 5,
             marginLeft: 10,
             marginRight: 10,
-            // marginTop: 3,
-            marginBottom: 75
+            ...Platform.select({
+                ios: {
+                    marginBottom: 75
+                },
+                android: {
+                    marginBottom: 25
+                }
+            })
         }, this.props.activeDotStyle]} />
         const Dot = this.props.dot || <View style={[{
             backgroundColor: this.props.dotColor || 'rgba(187,167,246,.25)',
@@ -541,8 +547,14 @@ export default class extends Component {
             borderRadius: 3,
             marginLeft: 10,
             marginRight: 10,
-            // marginTop: 3,
-            marginBottom: 75
+            ...Platform.select({
+                ios: {
+                    marginBottom: 75
+                },
+                android: {
+                    marginBottom: 25
+                }
+            })
         }, this.props.dotStyle]} />
         for (let i = 0; i < this.state.total; i++) {
             dots.push(i === this.state.index

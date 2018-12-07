@@ -26,11 +26,11 @@ export default class CashInItem extends Component {
                 <View style={[{height: 205, justifyContent: 'center', borderRadius: 10, backgroundColor: 'white'}, styles.elevationLow1]}>
                     <View style={{flexDirection: 'row', alignItems: 'center'}}>
                         <Image source={ avatar } style={{ height: 30, width: 30, marginLeft: 15 }} />    
-                        <Text style={{flex: 1, fontWeight: 'bold', fontSize: 15, marginLeft: 15}}>{name}</Text>
+                        <Text style={{flex: 1, fontSize: 15, marginLeft: 15, fontFamily: "HelveticaNeue"}}>{name}</Text>
                         <Image source={ require('../resources/delete.png') } style={{ height: 15, width: 12, marginRight: 15 }} />    
                     </View>
                     
-                    <Text style={{fontSize: 13, marginLeft: 15, marginRight: 15, marginTop: 10}}>{description}</Text>
+                    <Text style={{fontSize: 13, marginLeft: 15, marginRight: 15, marginTop: 10, fontFamily: "HelveticaNeue"}}>{description}</Text>
 
                     <View style={{flexDirection: 'row', marginTop: 20}}>
                         <View style={styles.date_view}>
@@ -77,6 +77,6 @@ const styles = StyleSheet.create({
         flexDirection: 'column', height: 35, width: (deviceWidth - 40) /2 , paddingLeft: 15
     },
     text: {
-        flex: 1, fontSize: 11
+        flex: 1, fontSize: 12, fontFamily: "HelveticaNeue"
     }
 });

@@ -101,21 +101,21 @@ export default class Statistics extends Component {
 
                 <Text style={{fontSize: 25, fontWeight: 'bold', marginTop: 50, textAlign: 'center'}}>Statistics</Text>
 
-                <View style={[{height: 250, backgroundColor: 'white', marginLeft: 20, marginRight: 20, borderRadius: 10, marginTop: 20}, styles.elevationLow1]}>    
+                <View style={[{height: 230, backgroundColor: 'white', marginLeft: 20, marginRight: 20, borderRadius: 10, marginTop: 20}, styles.elevationLow1]}>    
                     <View style={{flexDirection: 'row', height: 75}}>
                         <View style={{flex: 1, flexDirection: 'column', marginLeft: 15, height: 75, justifyContent: 'center'}}>
-                            <Text style={{fontWeight: 'bold', fontSize: 15}}>Transaction Overview</Text>
-                            <Text style={{color: '#262E49', fontSize: 12, marginTop: 10}}>Showing This Weekly Transaction</Text>
+                            <Text style={{fontWeight: 'bold', fontSize: 15, fontFamily: "Helvetica Neue"}}>Transaction Overview</Text>
+                            <Text style={{color: '#262E49', fontSize: 12, marginTop: 10, fontFamily: "HelveticaNeue"}}>Showing This Weekly Transaction</Text>
                         </View>
                         
                         <View style={{flexDirection: 'column', marginRight: 15, height: 75, justifyContent: 'center'}}>
                             <View style={{flexDirection: 'row', alignItems: 'center'}}>
                                 <View style={{width: 10, height: 10, borderRadius: 5, backgroundColor: '#BBA7F6'}} />
-                                <Text style={{fontSize: 13, marginLeft: 5}}>Received</Text>
+                                <Text style={{fontSize: 11, marginLeft: 5, fontFamily: "HelveticaNeue"}}>Received</Text>
                             </View>
                             <View style={{flexDirection: 'row', alignItems: 'center', marginTop: 10}}>
                                 <View style={{width: 10, height: 10, borderRadius: 5, backgroundColor: '#F6B6D9'}} />
-                                <Text style={{fontSize: 13, marginLeft: 5}}>Sent</Text>
+                                <Text style={{fontSize: 11, marginLeft: 5, fontFamily: "HelveticaNeue"}}>Sent</Text>
                             </View>
                         </View> 
                     </View>
@@ -134,32 +134,32 @@ export default class Statistics extends Component {
                     
                 </View>
 
-                <View style={[{height: 80, justifyContent: 'center', borderRadius: 10, backgroundColor: 'white', margin: 20}, styles.elevationLow1]}>
-                    <View style={{flexDirection: 'row', alignItems: 'center'}}>
+                <View style={[{justifyContent: 'center', borderRadius: 10, backgroundColor: 'white', margin: 20}, styles.elevationLow, (Platform.OS == "ios") ? {height: 80} : {height: 75}]}>
+                    <View style={[{flexDirection: 'row', alignItems: 'center'}, (Platform.OS == "android") ? {paddingTop: 7} : null]}>
                         <View style={{flex: 1, flexDirection: 'column', marginLeft: 15, height: 75}}>
-                            <Text style={{fontWeight: 'bold', fontSize: 15}}>Make Payment</Text>
-                            <Text style={{color: '#262E49', fontSize: 12, marginTop: 10}}>There are many variations of passages of Lorem lpsum.</Text>
+                            <Text style={{fontSize: 15, fontFamily: "HelveticaNeue"}}>Make Payment</Text>
+                            <Text style={{color: '#262E49', fontSize: 12, marginTop: 10, fontFamily: "HelveticaNeue"}}>There are many variations of passages of Lorem lpsum.</Text>
                         </View>
                         
                         <View style={{flexDirection: 'column', marginRight: 15, height: 75}}>
-                            <Text style={{fontSize: 12, textAlign: 'right'}}>18/08/2018</Text>
-                            <Text style={{fontSize: 15, textAlign: 'right', marginTop: 5}}>-$1200</Text>
-                            <Text style={{fontSize: 12, textAlign: 'right', marginTop: 20, color: '#F6B6D9'}}>Sent</Text>
+                            <Text style={{fontSize: 10, textAlign: 'right', fontFamily: "HelveticaNeue"}}>18/08/2018</Text>
+                            <Text style={{fontSize: 14, textAlign: 'right', marginTop: 5, fontWeight: 'bold', fontFamily: "Helvetica Neue"}}>-$1200</Text>
+                            <Text style={[{fontSize: 12, textAlign: 'right', color: '#F6B6D9'}, , (Platform.OS == "ios") ? {marginTop: 20} : {marginTop: 10}]}>Sent</Text>
                         </View>                        
                     </View>                   
                 </View>
 
-                <View style={[{height: 80, justifyContent: 'center', borderRadius: 10, backgroundColor: 'white', marginLeft: 20, marginRight:20}, styles.elevationLow1]}>
-                    <View style={{flexDirection: 'row', alignItems: 'center'}}>
+                <View style={[{justifyContent: 'center', borderRadius: 10, backgroundColor: 'white', marginLeft: 20, marginRight:20}, styles.elevationLow, , (Platform.OS == "ios") ? {height: 80} : {height: 75}]}>
+                    <View style={[{flexDirection: 'row', alignItems: 'center'}, (Platform.OS == "android") ? {paddingTop: 7} : null ]}>
                         <View style={{flex: 1, flexDirection: 'column', marginLeft: 15, height: 75}}>
-                            <Text style={{fontWeight: 'bold', fontSize: 15}}>Received Payment</Text>
-                            <Text style={{color: '#262E49', fontSize: 12, marginTop: 10}}>There are many variations of passages of Lorem lpsum.</Text>
+                            <Text style={{fontSize: 15, fontFamily: "HelveticaNeue"}}>Received Payment</Text>
+                            <Text style={{color: '#262E49', fontSize: 12, marginTop: 10, fontFamily: "HelveticaNeue"}}>There are many variations of passages of Lorem lpsum.</Text>
                         </View>
                         
                         <View style={{flexDirection: 'column', marginRight: 15, height: 75}}>
-                            <Text style={{fontSize: 12, textAlign: 'right'}}>15/08/2018</Text>
-                            <Text style={{fontSize: 15, textAlign: 'right', marginTop: 5}}>+$500</Text>
-                            <Text style={{fontSize: 12, textAlign: 'right', marginTop: 20, color: '#BBA7F6'}}>Received</Text>
+                            <Text style={{fontSize: 10, textAlign: 'right', fontFamily: "HelveticaNeue"}}>15/08/2018</Text>
+                            <Text style={{fontSize: 14, textAlign: 'right', fontWeight: 'bold', marginTop: 5, fontFamily: "Helvetica Neue"}}>+$500</Text>
+                            <Text style={[{fontSize: 12, textAlign: 'right', color: '#BBA7F6'}, (Platform.OS == "ios") ? {marginTop: 20} : {marginTop: 10} ]}>Received</Text>
                         </View>                        
                     </View>                   
                 </View>
@@ -168,7 +168,7 @@ export default class Statistics extends Component {
     }
 }
 const styles = StyleSheet.create({
-    elevationLow1: {
+    elevationLow: {
         ...Platform.select({
           ios: {
             shadowColor: 'grey',
@@ -177,7 +177,7 @@ const styles = StyleSheet.create({
             shadowRadius: 1,    
           },
           android: {
-            elevation: 5,
+            elevation: 2,
           },
         }),
     },        

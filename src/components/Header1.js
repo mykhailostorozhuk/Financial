@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, TouchableOpacity, Text, Dimensions, StyleSheet, Image } from 'react-native';
+import { View, TouchableOpacity, Text, Dimensions, StyleSheet, Image, Platform } from 'react-native';
 
 const deviceWidth = Dimensions.get('window').width
 
@@ -23,9 +23,9 @@ export default class Header1 extends Component {
                 <View style={{position: 'absolute', top: 265, flexDirection: 'row'}}>
 
                     <TouchableOpacity  onPress={() => goBack()}>
-                        <Image source={ require('../resources/back_white.png') } style={{ height: 17, width: 24, marginLeft: 58, marginTop: 4 }} />    
+                        <Image source={ require('../resources/back_white.png') } style={[{ height: 17, width: 24, marginTop: 4}, (Platform.OS == 'ios') ? {marginLeft: 58} : {marginLeft: 72} ]} />    
                     </TouchableOpacity>
-                    <Text style={{fontSize: 22, color: 'white', fontWeight: 'bold', textAlign: 'center', width: deviceWidth - 88}}>{this.state.title}</Text>
+                    <Text style={{fontSize: 25, color: 'white', fontWeight: 'bold', textAlign: 'center', width: deviceWidth - 88, fontFamily: "Helvetica Neue"}}>{this.state.title}</Text>
                 </View>
             </View> 
         );
@@ -34,7 +34,16 @@ export default class Header1 extends Component {
 
 const styles = StyleSheet.create({
     header_view: {
-        marginTop: -210, marginLeft: -38, height: 355
+        marginTop: -210, 
+        height: 355,
+        ...Platform.select({
+            ios: {
+                marginLeft: -38, 
+            },
+            android: {
+                marginLeft: -52, 
+            }
+        })
     },
     line: {
         backgroundColor: '#262E49', 

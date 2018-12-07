@@ -24,8 +24,8 @@ export default class ChangePin extends Component {
             <View style={{flex: 1}}>
                 <Header1 title={"Change Pin"} navigation={this.props.navigation} />
 
-                <Text style={{fontSize: 30, marginTop: 25, fontWeight: 'bold', marginLeft: 30}}>Change Pin</Text>
-                <Text style={{color: '#262E49', fontSize: 15, marginBottom: 25, marginLeft: 30, marginTop: 10}}>Change your current pin</Text>
+                <Text style={{fontSize: 30, marginTop: 25, fontWeight: 'bold', marginLeft: 30, fontFamily: "Helvetica Neue"}}>Change Pin</Text>
+                <Text style={{color: '#262E49', fontSize: 17, marginBottom: 25, marginLeft: 30, marginTop: 10, fontFamily: "HelveticaNeue"}}>Change your current pin</Text>
 
                 <View style={styles.user_infor}>
                     <TextInput style={[styles.text_input, styles.viewSpace]}
@@ -68,7 +68,9 @@ const styles = StyleSheet.create({
         flex: 1, 
         height: 40, 
         marginLeft: 16, 
-        color: 'white'
+        color: 'white',
+        fontFamily: "HelveticaNeue",
+        fontSize: 17
     },
     user_infor: {
         height: 45,

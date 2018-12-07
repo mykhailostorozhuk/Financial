@@ -36,6 +36,7 @@
 		2D16E6881FA4F8E400B85C8A /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D16E6891FA4F8E400B85C8A /* libReact.a */; };
 		2DCD954D1E0B4F2C00145EB5 /* FinancialTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* FinancialTests.m */; };
 		2DF0FFEE2056DD460020B375 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
+		2EF2A8C6ABA54793B7720A01 /* HelveticaNeue Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 302E080DCEEB4591914F4F73 /* HelveticaNeue Light.ttf */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		848EED8721B9858D00E3C9E7 /* BalloonMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848EED4521B9858D00E3C9E7 /* BalloonMarker.swift */; };
 		848EED8821B9858D00E3C9E7 /* BarDataExtract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848EED4721B9858D00E3C9E7 /* BarDataExtract.swift */; };
@@ -91,6 +92,8 @@
 		848EEDBA21B9858D00E3C9E7 /* HighlightUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848EED8621B9858D00E3C9E7 /* HighlightUtils.swift */; };
 		AA80C18FD71F4ED989928A44 /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0692C353000840CB95537913 /* libRNGestureHandler.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
+		B25D4A81968A4F74A1EE3770 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F3761BBB07AB4B1BBCD4B901 /* Lato-Regular.ttf */; };
+		CA2A04A6D8CF41259E2B0834 /* HelveticaNeueBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 341146CA1BBF4184BD440B47 /* HelveticaNeueBold.ttf */; };
 		D0AC1046FE96B2F13F4AB5EA /* Pods_Financial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1507A042727614683F0AED1A /* Pods_Financial.framework */; };
 /* End PBXBuildFile section */
 
@@ -403,10 +406,13 @@
 		2D02E47B1E0B4A5D006451C7 /* Financial-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Financial-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* Financial-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Financial-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		302E080DCEEB4591914F4F73 /* HelveticaNeue Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "HelveticaNeue Light.ttf"; path = "../assets/fonts/HelveticaNeue Light.ttf"; sourceTree = "<group>"; };
+		341146CA1BBF4184BD440B47 /* HelveticaNeueBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = HelveticaNeueBold.ttf; path = ../assets/fonts/HelveticaNeueBold.ttf; sourceTree = "<group>"; };
 		510E3C1308FB8BF3C1DFB7D7 /* Pods-Financial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Financial.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Financial/Pods-Financial.debug.xcconfig"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		65B59DF5377CFA6F371F7639 /* Pods-Financial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Financial.release.xcconfig"; path = "Pods/Target Support Files/Pods-Financial/Pods-Financial.release.xcconfig"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
+		7FDAD1F5CA2747F0B1D641C1 /* helvetica-neue-regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "helvetica-neue-regular.ttf"; path = "../assets/fonts/helvetica-neue-regular.ttf"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		848EED1021B9823C00E3C9E7 /* Financial-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Financial-Bridging-Header.h"; path = "Financial/Financial-Bridging-Header.h"; sourceTree = "<group>"; };
 		848EED4521B9858D00E3C9E7 /* BalloonMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalloonMarker.swift; sourceTree = "<group>"; };
@@ -466,6 +472,8 @@
 		848EED8521B9858D00E3C9E7 /* FontUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontUtils.swift; sourceTree = "<group>"; };
 		848EED8621B9858D00E3C9E7 /* HighlightUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighlightUtils.swift; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
+		CD45C80EE4AE4887BEB46C65 /* HelveticaNeue Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "HelveticaNeue Medium.ttf"; path = "../assets/fonts/HelveticaNeue Medium.ttf"; sourceTree = "<group>"; };
+		F3761BBB07AB4B1BBCD4B901 /* Lato-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Regular.ttf"; path = "../assets/fonts/Lato-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -659,6 +667,18 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		6B6E1893DFD54724B58B6B4F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7FDAD1F5CA2747F0B1D641C1 /* helvetica-neue-regular.ttf */,
+				302E080DCEEB4591914F4F73 /* HelveticaNeue Light.ttf */,
+				CD45C80EE4AE4887BEB46C65 /* HelveticaNeue Medium.ttf */,
+				341146CA1BBF4184BD440B47 /* HelveticaNeueBold.ttf */,
+				F3761BBB07AB4B1BBCD4B901 /* Lato-Regular.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		78C398B11ACF4ADC00677621 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -708,6 +728,7 @@
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				84D66D9921B96C04007680DB /* Recovered References */,
 				FE17917FEBA2D00E97911B60 /* Pods */,
+				6B6E1893DFD54724B58B6B4F /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -1362,6 +1383,9 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				2EF2A8C6ABA54793B7720A01 /* HelveticaNeue Light.ttf in Resources */,
+				CA2A04A6D8CF41259E2B0834 /* HelveticaNeueBold.ttf in Resources */,
+				B25D4A81968A4F74A1EE3770 /* Lato-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

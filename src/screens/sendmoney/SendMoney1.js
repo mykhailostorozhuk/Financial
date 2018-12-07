@@ -45,16 +45,16 @@ export default class SendMoney1 extends Component {
                         <View style={{flexDirection: 'row', alignItems: 'center', height: 65}}>
                             <Image source={ item.avatar } style={{ height: 30, width: 30, marginLeft: 15 }} />   
                             <View style={{flex: 1, flexDirection: 'column', height: 65, justifyContent: 'center'}}>
-                                <Text style={{fontWeight: 'bold', fontSize: 16, marginLeft: 15}}>{item.name}</Text>
+                                <Text style={{fontSize: 17, marginLeft: 15, fontFamily: "HelveticaNeue"}}>{item.name}</Text>
                                 <Text style={{marginLeft: 15, fontSize: 14, marginTop: 3, color: '#262E49'}}>{item.phone}</Text>
                             </View> 
                             <Image source={ require('../../resources/error.png') } style={{ height: 18, width: 18, marginRight: 15 }} />   
                         </View>
                     </View>                   
 
-                    <Text style={{fontWeight: 'bold', fontSize: 13, marginLeft: 25, marginTop: 10}}>Enter Your Amount</Text>
+                    <Text style={{fontSize: 12, marginLeft: 25, marginTop: 10, fontFamily: "HelveticaNeue"}}>Enter Your Amount</Text>
 
-                    <View style={[styles.user_infor, {marginTop: 25}]}>
+                    <View style={[styles.user_infor, (Platform.OS == "ios") ? {marginTop: 25} : {marginTop: 15}]}>
                         <TextInput style={[styles.text_input, styles.viewSpace]}
                             underlineColorAndroid = "transparent"
                             placeholder = "$100"
@@ -62,7 +62,7 @@ export default class SendMoney1 extends Component {
                             autoCapitalize = "none" />
                     </View>
 
-                    <View style={{flexDirection: 'row', marginTop: 30, marginLeft: 25, marginRight: 25}}>
+                    <View style={[{flexDirection: 'row', marginLeft: 25, marginRight: 25}, (Platform.OS == "ios") ? {marginTop: 30} : {marginTop: 15}]}>
                         <View style={styles.date_view}>
                             <Text style={[styles.text, {fontWeight: 'bold'}]}>Amount</Text>
                             <Text style={styles.text}>$100.00</Text>
@@ -80,8 +80,8 @@ export default class SendMoney1 extends Component {
                     { (title === "Send Money") ? 
                         <View style={{height: 60, marginTop: 20}}>
                             <View style={{flexDirection: 'row'}}>
-                                <Text style={{flex: 1, fontWeight: 'bold', fontSize: 13, marginLeft: 25}}>Reference</Text>
-                                <Text style={{fontSize: 12, marginTop: 3, color: '#262E49', marginRight: 25}}>0/25</Text>
+                                <Text style={{flex: 1, fontSize: 12, marginLeft: 25, fontFamily: "HelveticaNeue"}}>Reference</Text>
+                                <Text style={{fontSize: 11, marginTop: 3, color: '#262E49', marginRight: 25, fontFamily: "HelveticaNeue"}}>0/25</Text>
                             </View>
                             <View style={[styles.user_infor, {marginLeft: 25}]}>
                                 <TextInput style={{marginTop: 4}}
@@ -92,7 +92,7 @@ export default class SendMoney1 extends Component {
                             </View>
                         </View> :
                         <View style={{height: 60, marginTop: 20}}>
-                            <Text style={{fontWeight: 'bold', fontSize: 13, marginLeft: 25}}>Select Type</Text>
+                            <Text style={{fontSize: 12, marginLeft: 25, fontFamily: "HelveticaNeue"}}>Select Type</Text>
                             <View style={{flexDirection: 'row', height: 50, alignItems: 'center'}}>
                                 <Text style={{flex: 1, fontSize: 11, marginLeft: 25, color: '#262E49'}}>Select operator type</Text>
                                 <TouchableOpacity onPress={() => this.onChooseType(1)}>
@@ -144,11 +144,19 @@ const styles = StyleSheet.create({
     },
     text_input: {
         flex: 1, 
-        height: 40,
         marginLeft: 16, 
-        fontSize: 50,
         fontWeight: 'bold',
-        textAlign: 'center'
+        textAlign: 'center',
+        ...Platform.select({
+            ios: {
+                height: 40,
+                fontSize: 50,
+            },
+            android: {
+                height: 65,
+                fontSize: 40,
+            }
+        })
     },
     user_infor: {
         flexDirection: 'row', 
@@ -162,7 +170,7 @@ const styles = StyleSheet.create({
         flexDirection: 'column', height: 35, width: (deviceWidth - 100) / 3, alignItems: 'center' 
     },
     text: {
-        flex: 1, fontSize: 11
+        flex: 1, fontSize: 12, fontFamily: "HelveticaNeue"
     },
     sel_btn: {
         justifyContent: 'center', 
